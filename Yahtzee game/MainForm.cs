@@ -49,7 +49,7 @@ namespace Yahtzee_game
             Int32 numPlayers = (Int32)cmd.ExecuteScalar();
             */
 
-            GameController controller = new GameController(numPlayers);
+            new GameController(numPlayers);
             
             cnn.Close();
 

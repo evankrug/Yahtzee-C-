@@ -8,9 +8,24 @@ namespace Yahtzee_game
 {
     class GameController
     {
-        List<Player> PlayerList = new List<Player>();
+        const int TURNS = 13;
+        List<Player> playerList = new List<Player>();
+        Cup cup;
         public GameController(int numPlayers) {
-            
+            for(int i = 1; i <= numPlayers; i++)
+            {
+                playerList.Add(new Player(i));
+            }
+            StartGame();
+        }
+
+        private void StartGame()
+        {
+            cup = new Cup();
+        }
+        private void PassCup()
+        {
+
         }
     }
 }

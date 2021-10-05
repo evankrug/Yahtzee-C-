@@ -6,24 +6,34 @@ namespace Yahtzee_game
 {
     public class Player : Playable
     {
-        string name;
-        public Player(string name)
+        int id;
+        int turns;
+        public Player(int id)
         {
-            this.name = name;
+            this.id = id;
+            turns = 0;
         }
-        public void holdDice()
+        public void HoldDice()
         {
             throw new NotImplementedException();
         }
 
-        public void rollDice()
+        public void RollDice()
         {
             throw new NotImplementedException();
         }
 
-        public void score()
+        public void Score()
         {
             throw new NotImplementedException();
+        }
+        public int GetTurns()
+        {
+            return this.turns;
+        }
+        public void IncTurns()
+        {
+            ++this.turns;
         }
     }
 }
